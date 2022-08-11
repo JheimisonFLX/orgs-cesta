@@ -1,8 +1,10 @@
 import React from "react";
 import { Text, Image, StyleSheet, Dimensions, View } from "react-native";
 
+
 import topo from "../../assets/topo.png";
 import logo from "../../assets/logo.png";
+import { Montserrat_400Regular, Montserrat_700Bold } from "@expo-google-fonts/montserrat";
 
 const width = Dimensions.get("screen").width;
 
@@ -33,6 +35,7 @@ const estilos = StyleSheet.create({
   topo: {
     width: "100%",
     height: (578 / 768) * width,
+   
   },
 
   //#region Estilos
@@ -57,12 +60,13 @@ const estilos = StyleSheet.create({
     color: "#464646",
     fontSize: 26,
     lineHeight: 42,
-    fontWeight: "bold",
+    fontFamily: "Montserrat_700Bold",
   },
 
   fazenda: {
     flexDirection: "row",
-    paddingVertical: 12
+    paddingVertical: 12,
+    
   },
 
   imagemFazenda: {
@@ -73,7 +77,8 @@ const estilos = StyleSheet.create({
   nomeFazenda: {
     fontSize: 16,
     lineHeight: 26,
-    marginLeft: 12
+    marginLeft: 12,
+    fontFamily: "Montserrat_400Regular",
   },
 
   descricao: {
