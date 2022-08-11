@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, Image, StyleSheet, Dimensions, View } from "react-native";
 
+import Texto from "../componentes/Texto";
 
 import topo from "../../assets/topo.png";
 import logo from "../../assets/logo.png";
@@ -12,20 +13,20 @@ export default function Cesta() {
   return (
     <>
       <Image source={topo} style={estilos.topo} />
-      <Text style={estilos.titulo}>Detalhe da cesta</Text>
+      <Texto style={estilos.titulo}>Detalhe da cesta</Texto>
 
       <View style={estilos.cesta}>
-        <Text style={estilos.nome}>Cesta de Verduras</Text>
+        <Texto style={estilos.nome}>Cesta de Verduras</Texto>
         <View style={estilos.fazenda}>
           <Image source={logo} style={estilos.imagemFazenda} />
-          <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
+          <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>
         </View>
-        <Text style={estilos.descricao}>
+        <Texto style={estilos.descricao}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500.
-        </Text>
-        <Text style={estilos.preco}>R$ 40,00</Text>
+        </Texto>
+        <Texto style={estilos.preco}>R$ 40,00</Texto>
       </View>
     </>
   );
@@ -60,7 +61,7 @@ const estilos = StyleSheet.create({
     color: "#464646",
     fontSize: 26,
     lineHeight: 42,
-    fontFamily: "Montserrat_700Bold",
+    fontWeight: "bold",
   },
 
   fazenda: {
@@ -78,7 +79,7 @@ const estilos = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     marginLeft: 12,
-    fontFamily: "Montserrat_400Regular",
+    
   },
 
   descricao: {
