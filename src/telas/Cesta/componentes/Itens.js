@@ -3,20 +3,20 @@ import Texto from "../../../componentes/Texto";
 import { View, Image, StyleSheet, FLatList } from "react-native";
 
 export default function Itens({ titulo, lista }) {
-  // const renderItem = ({ item: { nome, imagem } }) => (
-  //   <View key={nome} style={estilos.item}>
-  //     <Image source={imagem} style={estilos.imagem}></Image>
-  //     <Texto style={estilos.nome}>{nome}</Texto>
-  //   </View>
-  // );
+  const renderItem = ({ item: { nome, imagem } }) => (
+    <View key={nome} style={estilos.item}>
+      <Image source={imagem} style={estilos.imagem}></Image>
+      <Texto style={estilos.nome}>{nome}</Texto>
+    </View>
+  );
   return (
     <>
       <Texto style={estilos.titulo}>{titulo}</Texto>
-      {/* <FLatList
+      <FLatList
         data={lista}
         renderItem={renderItem}
         KeyExtractor={({ nome }) => nome}
-      ></FLatList> */}
+      ></FLatList>
       {lista.map(({ nome, imagem }) => {
         return (
           <View key={nome} style={estilos.item}>
