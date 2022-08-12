@@ -18,6 +18,7 @@ const cesta = {
     preco: "R$ 40,00",
     botao: "Comprar",
   },
+  
   itens: {
     titulo: "Itens da cesta",
     lista: [
